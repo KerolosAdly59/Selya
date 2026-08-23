@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title> عقيقة سيليا 🎈🎉</title>
-      <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="icon" type="image/png" href="./favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     <style>
         * {
             box-sizing: border-box
-        } 
+        }
 
         html {
             scroll-behavior: smooth
@@ -517,18 +517,29 @@
         const audio = $("music"), musicBtn = $("musicBtn");
         musicBtn.onclick = async () => { if (audio.paused) { try { await audio.play(); musicBtn.classList.add("playing"); musicBtn.innerHTML = "❚❚ <span> 🎵</span>" } catch (e) { } } else { audio.pause(); musicBtn.classList.remove("playing"); musicBtn.innerHTML = "♪ <span> 🔇</span>" } };
 
-        $("whatsapp").onclick = () => {
-            const text = `🌸 دعوة عقيقة سيليا 🌸
+$("whatsapp").onclick =  () => {
+
+    const link = window.location.href;
+
+    const text = `🌸 دعوة عقيقة سيليا 🌸
 
 يسعدنا دعوتكم لمشاركتنا فرحتنا بمناسبة عقيقتها 💕
-📅 الجمعة 30 اغسطس 2026
+
+📅 الجمعة 30 أغسطس 2026
 🕐 12:00 مساءً
-📍 عماره 56 الاسكان المتميز العبور الجديده شقه 7 مشروع 2600 فداتن سابقا - القاهره
+📍 عماره 56 الاسكان المتميز العبور الجديدة
+شقه 7 - مشروع 2600 فدان سابقًا - القاهرة
 
+نسعد بوجودكم ومشاركتكم فرحتنا ❤️
 
-نسعد بوجودكم ومشاركتكم فرحتنا ❤️`; window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank")
-        };
-        $("copy").onclick = async () => { try { await navigator.clipboard.writeText(location.href); $("copy").textContent = "✓ تم نسخ الرابط"; setTimeout(() => $("copy").textContent = "🔗 نسخ رابط الدعوة", 1800) } catch (e) { alert("انسخ الرابط من شريط المتصفح") } };
+🌸 تفاصيل الدعوة:
+${link}`;
+
+    window.open(
+        "https://wa.me/?text=" + encodeURIComponent(text),
+        "_blank"
+    );
+};        $("copy").onclick = async () => { try { await navigator.clipboard.writeText(location.href); $("copy").textContent = "✓ تم نسخ الرابط"; setTimeout(() => $("copy").textContent = "🔗 نسخ رابط الدعوة", 1800) } catch (e) { alert("انسخ الرابط من شريط المتصفح") } };
     </script>
 </body>
 
