@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title> عقيقة سيليا 🎈🎉</title>
+      <link rel="icon" type="image/png" href="./favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box
+        } 
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            color: #673d46;
+            background: #fff8f5;
+            font-family: Cairo, Arial, sans-serif;
+            overflow-x: hidden
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 70px 18px;
+            position: relative;
+            background: radial-gradient(circle at 50% 5%, #ffe0e7 0, #fff1ed 42%, #fff8f5 78%)
+        }
+
+        .hero:before,
+        .hero:after {
+            content: "🌸";
+            position: absolute;
+            font-size: 100px;
+            opacity: .55
+        }
+
+        .hero:before {
+            top: 25px;
+            left: 5%
+        }
+
+        .hero:after {
+            right: 5%;
+            bottom: 50px
+        }
+
+        .hero-card {
+            width: min(900px, 100%);
+            text-align: center;
+            padding: 70px 25px;
+            border: 1px solid #e5bb79;
+            border-radius: 48px;
+            background: rgba(255, 255, 255, .68);
+            box-shadow: 0 30px 100px rgba(125, 62, 78, .14);
+            backdrop-filter: blur(12px)
+        }
+
+        .small-title {
+            font-family: Amiri, serif;
+            font-size: 26px;
+            color: #843e4d
+        }
+
+        .divider {
+            color: #d9a85b;
+            margin: 14px
+        }
+
+        .intro {
+            font-family: Amiri, serif;
+            font-size: 26px
+        }
+
+        .name {
+            font-family: Amiri, serif;
+            font-size: clamp(76px, 16vw, 145px);
+            line-height: 1;
+            color: #d95775;
+            text-shadow: 0 4px 0 rgba(255, 255, 255, .8);
+            margin: 18px 0 5px
+        }
+
+        .crown {
+            font-size: 28px
+        }
+
+        .hero-card p {
+            font-family: Amiri, serif;
+            font-size: 22px;
+            line-height: 2;
+            color: #75434d
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 12px 28px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid #e4b96f;
+            color: #d95775;
+            font-weight: 800;
+            font-size: 20px
+        }
+
+        .decor {
+            position: absolute
+        }
+
+        .crescent {
+            font-size: 150px;
+            color: #d8a85b;
+            left: 4%;
+            top: 25%;
+            transform: rotate(-18deg);
+            opacity: .35
+        }
+
+        .lantern {
+            right: 7%;
+            top: 14%;
+            font-size: 62px;
+            opacity: .7
+        }
+
+        .section {
+            width: min(1050px, 100%);
+            margin: auto;
+            padding: 70px 18px
+        }
+
+        .section h2 {
+            text-align: center;
+            color: #d95775;
+            font-size: 34px;
+            margin: 0
+        }
+
+        .gold-line {
+            width: 150px;
+            height: 2px;
+            margin: 12px auto 35px;
+            background: linear-gradient(90deg, transparent, #d9a85b, transparent)
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .card {
+            background: rgba(255, 255, 255, .75);
+            border: 1px solid #f0d5d8;
+            border-radius: 28px;
+            padding: 28px 18px;
+            text-align: center;
+            box-shadow: 0 16px 50px rgba(141, 74, 91, .09);
+            transition: .3s
+        }
+
+        .card:hover {
+            transform: translateY(-7px)
+        }
+
+        .icon {
+            font-size: 42px;
+            margin-bottom: 8px
+        }
+
+        .card span {
+            display: block;
+            color: #a35a68
+        }
+
+        .card strong {
+            display: block;
+            font-size: 20px;
+            margin-top: 8px
+        }
+
+        .card small {
+            display: block;
+            margin-top: 8px;
+            color: #98626c
+        }
+
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px
+        }
+
+        .countdown div {
+            background: rgba(255, 255, 255, .78);
+            border: 1px solid #efd8d7;
+            border-radius: 22px;
+            padding: 22px;
+            text-align: center
+        }
+
+        .countdown b {
+            display: block;
+            font-size: 43px;
+            color: #d95775
+        }
+
+        .countdown span {
+            font-size: 14px
+        }
+
+        .location-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            padding: 28px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, .75);
+            border: 1px solid #f0d5d8;
+            box-shadow: 0 16px 50px rgba(141, 74, 91, .09)
+        }
+
+        .location-title {
+            font-size: 25px;
+            color: #d95775;
+            font-weight: 800
+        }
+
+        .location-card strong {
+            font-size: 23px
+        }
+
+        .location-card p {
+            margin: 5px 0;
+            color: #875761
+        }
+
+        .location-card a,
+        .whatsapp,
+        .copy {
+            border: 0;
+            border-radius: 999px;
+            padding: 15px 24px;
+            font: inherit;
+            font-weight: 800;
+            text-decoration: none;
+            cursor: pointer
+        }
+
+        .location-card a {
+            background: #df6681;
+            color: #fff;
+            box-shadow: 0 8px 25px #df66813d
+        }
+
+        .share-section {
+            text-align: center
+        }
+
+        .share-section p {
+            font-size: 19px
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .whatsapp {
+            background: #25d366;
+            color: white
+        }
+
+        .copy {
+            background: white;
+            color: #b34b62;
+            border: 1px solid #e6c8cf
+        }
+
+        .music-btn {
+            position: fixed;
+            z-index: 10;
+            top: 18px;
+            right: 18px;
+            border: 0;
+            border-radius: 999px;
+            padding: 12px 17px;
+            background: #fff;
+            color: #a54860;
+            box-shadow: 0 8px 25px #7d3e4c22;
+            font-weight: 800;
+            cursor: pointer
+        }
+
+        .music-btn.playing {
+            background: #d95775;
+            color: #fff
+        }
+
+        footer {
+            padding: 10px 18px 60px;
+            text-align: center
+        }
+
+        .footer-card {
+            width: min(800px, 100%);
+            margin: auto;
+            padding: 38px 20px;
+            border-radius: 38px;
+            border: 1px solid #e9b4be;
+            background: rgba(255, 255, 255, .75)
+        }
+
+        .footer-card h3 {
+            font-size: 25px;
+            color: #a8465d
+        }
+
+        .footer-card p {
+            font-size: 18px
+        }
+
+        .petals {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 5;
+            overflow: hidden
+        }
+
+        .petal {
+            position: absolute;
+            top: -30px;
+            width: 13px;
+            height: 20px;
+            background: #f2a5b6;
+            border-radius: 80% 20% 80% 20%;
+            opacity: .55;
+            animation: fall linear infinite
+        }
+
+        @keyframes fall {
+            to {
+                transform: translate(80px, 110vh) rotate(360deg);
+                opacity: 0
+            }
+        }
+
+        @media(max-width:720px) {
+            .hero-card {
+                padding: 52px 18px;
+                border-radius: 35px
+            }
+
+            .small-title {
+                font-size: 20px
+            }
+
+            .intro {
+                font-size: 22px
+            }
+
+            .hero-card p {
+                font-size: 19px
+            }
+
+            .crescent {
+                font-size: 90px
+            }
+
+            .lantern {
+                font-size: 40px
+            }
+
+            .cards {
+                grid-template-columns: 1fr
+            }
+
+            .countdown {
+                gap: 7px
+            }
+
+            .countdown div {
+                padding: 15px 5px
+            }
+
+            .countdown b {
+                font-size: 30px
+            }
+
+            .location-card {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center
+            }
+
+            .location-card a {
+                text-align: center
+            }
+
+            .section {
+                padding: 50px 14px
+            }
+
+            .section h2 {
+                font-size: 29px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="petals" aria-hidden="true"></div>
+    <button class="music-btn" id="musicBtn"> <span>🎵 </span></button>
+    <audio id="music" src="./music.mp3" loop></audio>
+
+    <section class="hero">
+        <div class="decor crescent">☾</div>
+        <div class="decor lantern">🏮</div>
+        <div class="hero-card reveal">
+            <div class="small-title">الحمد لله الذي بنعمته تتم الصالحات</div>
+            <div class="divider">♥</div>
+            <div class="intro">رزقنا الله بمولودتنا</div>
+            <div class="name">سيليا</div>
+            <div class="crown">♕　🌸</div>
+            <p>ونسأل الله أن يجعلها من مواليد السعادة،<br>وأن يبارك لنا فيها ويبارك فيها لنا،<br>ويسعدنا بدعوتكم
+                لمشاركتنا فرحتنا</p>
+            <div class="badge">♥ بمناسبة عقيقتها ♥</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>تفاصيل العقيقة</h2>
+        <div class="gold-line"></div>
+        <div class="cards">
+            <div class="card">
+                <div class="icon">📍</div><span>المكان</span><strong> المنزل</strong><small>عماره 56 الاسكان المتميز
+                    العبور الجديده شقه 7 مشروع 2600 فداتن سابقا - القاهرة</small>
+            </div>
+            <div class="card">
+                <div class="icon">📅</div><span>التاريخ</span><strong>الجمعة 30 مايو 2026</strong><small>ننتظركم بكل
+                    حب</small>
+            </div>
+            <div class="card">
+                <div class="icon">🕐</div><span>الساعة</span><strong>12:00 مساءً</strong><small>يسعدنا حضوركم</small>
+            </div>
+        </div>
+    </section>
+
+    <section class="section countdown-section">
+        <h2>الوقت المتبقي للعقيقة</h2>
+        <div class="gold-line"></div>
+        <div class="countdown" id="countdown">
+            <div><b id="days">00</b><span>يوم</span></div>
+            <div><b id="hours">00</b><span>ساعة</span></div>
+            <div><b id="minutes">00</b><span>دقيقة</span></div>
+            <div><b id="seconds">00</b><span>ثانية</span></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="location-card">
+            <div>
+                <div class="location-title">📍 المكان</div><strong> المنزل</strong>
+                <p>عماره 56 الاسكان المتميز العبور الجديده شقه 7 مشروع 2600 فداتن سابقا - القاهرة</p>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=عماره+56+الاسكان+المتميز+العبور+الجديده+شده+7+مشروع+2600+فداتن+سابقا+-+القاهرة"
+                target="_blank">🗺️ عرض الموقع على الخريطة</a>
+        </div>
+    </section>
+
+    <section class="section share-section">
+        <h2>شارك الدعوة</h2>
+        <p>شارك فرحتنا مع من تحب 🌸</p>
+        <div class="buttons">
+            <button class="whatsapp" id="whatsapp">💬 مشاركة الدعوة عبر واتساب</button>
+            <button class="copy" id="copy">🔗 نسخ رابط الدعوة</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-card">
+            <h3>تشرفنا بوجودكم ومشاركتكم فرحتنا ❤️</h3>
+            <p>الدعاء لها لا تحرمونا</p>
+            <div>🌸 تم بحب 🌸</div>
+        </div>
+    </footer>
+    <script>const eventDate = new Date("2026-08-30T08:00:00+03:00").getTime();
+        const $ = id => document.getElementById(id);
+        function updateCountdown() {
+            let d = Math.max(0, eventDate - Date.now()), s = Math.floor(d / 1000);
+            $("days").textContent = String(Math.floor(s / 86400)).padStart(2, "0");
+            $("hours").textContent = String(Math.floor(s % 86400 / 3600)).padStart(2, "0");
+            $("minutes").textContent = String(Math.floor(s % 3600 / 60)).padStart(2, "0");
+            $("seconds").textContent = String(s % 60).padStart(2, "0");
+        }
+        updateCountdown(); setInterval(updateCountdown, 1000);
+
+        const petals = document.querySelector(".petals");
+        for (let i = 0; i < 18; i++) { const p = document.createElement("i"); p.className = "petal"; p.style.left = (Math.random() * 100) + "%"; p.style.animationDelay = (Math.random() * 8) + "s"; p.style.animationDuration = (8 + Math.random() * 7) + "s"; p.style.transform = `scale(${.7 + Math.random() * .8})`; petals.appendChild(p) }
+
+        const audio = $("music"), musicBtn = $("musicBtn");
+        musicBtn.onclick = async () => { if (audio.paused) { try { await audio.play(); musicBtn.classList.add("playing"); musicBtn.innerHTML = "❚❚ <span> 🎵</span>" } catch (e) { } } else { audio.pause(); musicBtn.classList.remove("playing"); musicBtn.innerHTML = "♪ <span> 🔇</span>" } };
+
+        $("whatsapp").onclick = () => {
+            const text = `🌸 دعوة عقيقة جنى 🌸
+
+يسعدنا دعوتكم لمشاركتنا فرحتنا بمناسبة عقيقتها 💕
+📅 الجمعة 30 مايو 2026
+🕐 08:00 مساءً
+📍 قاعة الورد - شارع النخيل، القاهرة
+
+
+نسعد بوجودكم ومشاركتكم فرحتنا ❤️`; window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank")
+        };
+        $("copy").onclick = async () => { try { await navigator.clipboard.writeText(location.href); $("copy").textContent = "✓ تم نسخ الرابط"; setTimeout(() => $("copy").textContent = "🔗 نسخ رابط الدعوة", 1800) } catch (e) { alert("انسخ الرابط من شريط المتصفح") } };
+    </script>
+</body>
+
+</html>
